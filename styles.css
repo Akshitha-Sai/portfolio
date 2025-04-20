@@ -1,0 +1,137 @@
+body {
+    background: linear-gradient(135deg, #EC255A, #F5E6FF, #2C1F3A);
+    color: #F5E6FF;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+header {
+    background: linear-gradient(to top, rgba(236, 37, 90, 0.3), rgba(236, 37, 90, 0.1));
+    padding: 50px;
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(236, 37, 90, 0.5);
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #F5E6FF;
+    animation: bounce 2s infinite;
+    object-fit: cover;
+    filter: brightness(1.2);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.btn {
+    background: #EC255A;
+    color: #F5E6FF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: #D4A6E0;
+    transform: scale(1.1);
+}
+
+section {
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(44, 31, 58, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(236, 37, 90, 0.3);
+    transition: transform 0.3s;
+    width: 85%;
+    max-width: 1200px;
+    flex: 1 0 auto;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+.edu-card, .project-card {
+    background: rgba(245, 230, 255, 0.2);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border-left: 10px solid #EC255A;
+    transition: box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edu-card:hover, .project-card:hover {
+    box-shadow: 0 0 15px #D4A6E0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h2 {
+    color: #EC255A;
+    text-shadow: 2px 2px 6px #2C1F3A;
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #D4A6E0;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+footer {
+    padding: 20px;
+    background: rgba(44, 31, 58, 0.8);
+    margin-top: auto;
+    width: 100%;
+}
